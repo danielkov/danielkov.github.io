@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Daniel Kovacs - Software Engineer / Software Engineering Team Lead
+    </title>
+    <link rel="stylesheet" href="dist/styles.css" />
+  </head>
+  <body class="py-8 px-4 grid place-content-center">
+    <header
+      class="flex flex-col items-center prose prose-a:text-blue-600 prose-a:cursor-pointer"
+    >
+      <img
+        src="https://avatars.githubusercontent.com/u/18039004?v=4"
+        class="rounded-full w-24 h-24"
+      />
+      <h1>
+        Daniel Kovács
+
+        <span class="flags"> 🇭🇺&middot;🇬🇧 </span>
+      </h1>
+      <div class="relative pb-16">
+        <input
+          type="checkbox"
+          id="pronounciation"
+          name="pronounciation"
+          class="hidden peer/pronounciation"
+        />
+        <label
+          class="text-xl cursor-pointer italic font-semibold text-slate-500"
+          for="pronounciation"
+          >/ˈkoʊvætʃ/ <span class="play-icon">🔊</span></label
+        >
+        <audio
+          src="kovacs-pronounciation.mp3"
+          class="hidden peer-checked/pronounciation:block absolute bottom-0 left-1/2 transform -translate-x-1/2"
+          controls
+        ></audio>
+      </div>
+      <nav class="">
+        <a href="mailto:kovacsemod@gmail.com">kovacsemod@gmail.com</a>
+        <a href="https://www.linkedin.com/in/kovacsemod/"
+          >linkedin.com/in/kovacsemod</a
+        >
+        <a href="https://www.github.com/danielkov">github.com/danielkov</a>
+      </nav>
+      <h2>Software Engineer & Engineering Team Lead</h2>
+      <h3>Summary</h3>
+      <p class="text-center">
+        Software engineer, leader of high-performing teams, and mentor with 12+
+        years of experience in the software industry.
+      </p>
+    </header>
+    <main
+      class="prose py-8 prose-h2:before:content-['►_'] prose-h2:before:text-blue-600 prose-h2:before:text-xl"
+    >
+      <h2>What I'm excited about...</h2>
+      <p>
+        I've been writing code since I was 12 years old. It's what I'm great at,
+        but also what I love to do. A fulfilling career for me means sharing my
+        knowledge and experience with others, and helping them grow. I'm excited
+        about the opportunity to work with a team of talented engineers, writing
+        code that reaches hundreds of millions of users, thousands of
+        developers, and makes a true difference in the world. Tailwind has been
+        my go-to CSS framework for the past 5 years. Contributing to its success
+        on a daily basis would be a true honor.
+      </p>
+      <p>
+        I always bet on open source culture as evidenced by my contributions to
+        variety of open source projects, as well as my efforts to build a
+        culture of open source within the teams and companies I work with.
+        Joining TailwindLabs would mean a chance to work with people who share
+        this passion, and to help build a product that is loved by developers
+        around the world.
+      </p>
+      <h2>Interesting projects I've worked on...</h2>
+      <p>
+        I've been fortunate to get a chance to work on a large variety of
+        exciting projects in the last 12 years. It's hard to pick just a few,
+        but I'll try to highlight some that not only challenged me technically
+        and helped me grow as an engineer, but also ones where my contributions
+        had a significant impact on the product and the team.
+      </p>
+      <h3>
+        Full Rewrite of the Live Stream Client at
+        <a href="https://livejasmin.com"
+          >LiveJasmin <span class="text-red-600">(NSFW)</span></a
+        >
+      </h3>
+      <p>
+        The live stream client, also referred to internally as "chat client" is
+        the core of the user experience at the adult streaming site LiveJasmin
+        and in 2019, when I started on this project it was responsible for
+        generating over 90% of the entire revenue of the company (~$700M). It
+        was originally developed in 2001 and had undergone its first major
+        transformation in 2010 after Steve Jobs' infamous "Thoughts on Flash"
+        letter. The client was written in ActionScript, and was running on the
+        Flash Player plugin. The company scrambled to come up with an
+        alternative and that's how they ended up with a solution based on Haxe,
+        which is sytactically similar to ActionScript, but compiles to
+        JavaScript. The client was a monolithic application that was responsible
+        for everything from rendering the video stream to handling the chat
+        messages, and it was showing its age. The codebase was a mess, and the
+        client was slow, buggy, and hard to maintain. It was also incredibly
+        difficult to find AS3 developers in 2019, let alone people familiar with
+        the obscure language that is Haxe, which - by then - had diverged quite
+        a bit from its roots. A brilliant colleague of mine,
+        <a href="https://www.linkedin.com/in/andormade/">Andor Polgar</a>
+        wrote a proposal to rewrite the client in JavaScript and I was chosen to
+        architect and lead the project.
+      </p>
+      <p>
+        I've decided to use TypeScript as the language of choice, due to its
+        increasing popularity, and because I had great experiences with it in
+        the past; although at that point, the company wasn't using it at all. It
+        was a bet that paid off in the end, as the team quickly adopted to the
+        language. We shared the workload by allocating tasks that required
+        complicated typings - commonly referred to as "type gymnastics" - to the
+        more experienced developers - mainly myself. I took care of abstracting
+        complex typings behind utility types to make it highly understandable
+        and usable at all levels of seniority.
+      </p>
+      <p>
+        React became my choice of UI rendering library due to its popularity and
+        because it followed precedent set by a handful of project prior to this
+        one. React allowed us to move fast, while also giving us the flexibility
+        to iterate on increasingly complex features, all while keeping
+        performance in check. It also paired well with Redux, which I picked as
+        the state management library for the project. Redux has a very shallow
+        learning curve and it's very simple to test. Not only that but one can
+        also use Redux just by itself. The lack of reliance on React for running
+        business logic was a great boon, as it allowed other teams to use the
+        core business logic of the library to develop their own clients using
+        different technologies. One great example is the chat bot team, who used
+        our Redux store in standalone mode to spin up a fully featured chat bot,
+        using Node.JS and just 16 lines of code. Overall this project allowed us
+        to deprecate over 1 million lines of code.
+      </p>
+      <p>
+        The reason I'm particularly proud of this project, is because we pulled
+        it off with a tiny team of just 3 engineers, including myself. On launch
+        day, my contributions represented over 80% of the code base, however,
+        well established contribution guidelines meant that it didn't feel like
+        something only I could maintain. The code was clean. Although hacks were
+        often necessary, especially to bring very old browsers in line, they
+        were well documented and properly abstracted. For the first 3 months of
+        the project's live operation, we've had zero bugs reported, which is a
+        true testament to the power of a solid, modular architecture and a well
+        tested codebase.
+      </p>
+      <p>
+        The most exciting part of this project was reverse-engineering decade
+        old code, without documentation and often without access to the original
+        developers. What made it even more challenging was the fact that we had
+        to support an obscene range of browsers, including IE9, Safari 5.1, and
+        Opera 12. The project was a great success, and it was a great learning
+        experience for me. I've learned a lot about the importance of
+        documentation, testing, and the power of a well-architected codebase.
+      </p>
+      <h3>
+        Vite Plugin for ESM Federation -
+        <a href="https://github.com/superbet-group/vite-plugin-esm-federation"
+          >Available on GitHub here</a
+        >
+      </h3>
+      <p>
+        This is a much smaller project, but one that I'm proud of for a
+        different reason. I've been working with multiple teams at Superbet on
+        enabling and promoting microfrontends for about two years, when a
+        colleague and I developed this idea of "browser-native" ESM federation.
+        This is a take on
+        <a href="https://github.com/ScriptedAlchemy">Zack Jackson</a>'s module
+        federation concept, but instead of relying on build tools to produce the
+        necessary federation runtime, it relies on cutting-edge browser native
+        features, such as ESM Dynamic Imports and Import Maps. The reason I
+        researched and ultimately developed this idea was that the only
+        available Vite Plugin that supported Module Federation at the time was
+        developed by a Vue shop, called OriginJS and they frequently broke React
+        support between releases. Being stuck on a lower version of this plugin
+        meant we couldn't keep up with the release schedule of Vite. We couldn't
+        realize bundle size savings and build time reductions and that prompted
+        me to see if I can fix the Vite plugin.
+      </p>
+      <p>
+        After working for a couple days on coming up with a fix into the
+        OriginJS plugin I realized, I pretty much had to rewrite the majority of
+        the core of the plugin. I did not want to propose the burden of having
+        to test a massive rework of the plugin to a company that didn't even
+        directly benefit from React support in the first place. Instead I
+        decided to create a new plugin from scratch.
+      </p>
+      <p>
+        There are two reasons I'm proud of this. Firstly, a colleague
+        <a
+          href="https://github.com/originjs/vite-plugin-federation/issues/173#issuecomment-1461187444"
+          >sent me this link</a
+        >, which is a comment on one of the many React support issues on the
+        OriginJS plugin's GitHub page. It mentions the plugin I wrote. I have
+        more popular projects on GitHub, such as
+        <a href="https://github.com/danielkov/gin-helmet">Gin Helmet</a>, which
+        has a whopping 40 stars, but this is the first time I've seen someone
+        mention one of my projects in the wild. I didn't intend for this to be
+        used by anyone else, other than the teams within the company, so
+        documentation is (to this day) internal, but it's a great feeling to see
+        that someone found it useful. Secondly, I've learned a great deal about
+        Vite, Rollup plugins and the Vite Plugin API, as well as some of the
+        quirks of the latest ESM features in browsers. It took me less than a
+        week from initial idea to a working plugin, which gave me a lot of
+        confidence in my ability to quickly learn new technologies and apply
+        them in practice.
+      </p>
+      <h3>
+        Superbundle - a tool for building microfrontends at scale, built in Rust
+      </h3>
+      <p>
+        I wish I could say this project was a success, but it wasn't, hence why
+        I'm not sharing a project page. It never made it past internal PoCs and
+        MVPs. The reason why it came to mind is because it was the first time I
+        used Rust in a professional setting. I've been a huge fan of the
+        language for multiple years prior to starting this project, however I've
+        failed to advocate for the use of it many times. Rust was the language
+        that introduced me to the concept of developing an entire application in
+        the IDE the resulting software working as intended on the first compile.
+        A thrill I chase to this day.
+      </p>
+      <p>
+        Superbundle was an all inclusive bundling tool, built on top of SWC,
+        Tokio and an Axum server for development. I've designed it to be able to
+        handle live updates across multiple different microfrontends, all
+        running in their own sandbox, with the possibility of interoperating
+        with a combination of dev mode and production mode microfrontends. It
+        supported plugins via SWC and was able to bundle a 9MB minified
+        non-gzipped frontend application in production mode in under 12 seconds,
+        which was a huge improvement over the 6 minutes it took Webpack, or even
+        the 1-2 minutes it took Vite to build the same codebase.
+      </p>
+      <p>
+        The key thing I've learned from this project is how fascinatingly
+        complex React live updates are. Implementing them into this bundler was
+        a true challenge. Most importantly I've learned to better evaluate the
+        ROI of a fairly big project like this and to better communicate the
+        value of it to the stakeholders. I've also learned that Rust is a great
+        language for building tools, but it's not always the right choice for
+        the job. I've learned to be more pragmatic in my technology choices, and
+        to always consider the long-term maintainability of the codebase.
+      </p>
+
+      <blockquote>
+        <p>
+          The best way to find out about the variety of projects I've worked on
+          is to get in touch with me and have a chat. I'm always happy to talk
+          about my experiences.
+        </p>
+      </blockquote>
+
+      <h2>Open-source contributions...</h2>
+
+      <p>
+        This is an area I hope to keep improving in the future. I've contributed
+        to a variety of projects, but I'm particularly proud of my contributions
+        to the following:
+      </p>
+
+      <h3>
+        My
+        <a href="https://github.com/gatsbyjs/gatsby/issues/12549"
+          >First Big OSS Contribution - Gatsby</a
+        >
+      </h3>
+
+      <p>
+        I've used Gatsby for many years, mainly to build and maintain my
+        freelancing portfolio site. On one occasion, I've stumbled upon a bug
+        while updating my site to the latest version of Gatsby. I've decided to
+        investigate the issue and see if I can fix it. Sure enough, after a
+        couple minutes of tinkering, I've managed to make it function as
+        expected locally.
+      </p>
+      <p>
+        I've created a PR of the small fix and added some tests to cover the
+        case. It was merged within a couple hours. I've also had some
+        suggestions from one of the maintainers, and although I decided not to
+        take that route with my fix, I appreciated the feedback and the time
+        they've taken to review my PR.
+      </p>
+
+      <h3>
+        <a href="https://github.com/gatsbyjs/gatsby/issues/21995"
+          >Migrate Gatsby to TypeScript</a
+        >
+      </h3>
+
+      <p>
+        As part of a huge community effort to migrate Gatsby from JavaScript to
+        TypeScript, I took on the task of migrating the
+        <code>gatsby-core-utils</code>
+        package. The task itself wasn't particularly difficult. The biggest
+        challenge was keeping up with coordination inside multiple channels,
+        e.g.: GitHub Issues and Discord. This taught me the importance of
+        clarifying communication channels, especially in large community-driven
+        projects.
+      </p>
+
+      <h3>
+        <a href="https://github.com/sportloop/mrc"
+          >MRC - A Workout File Parser in TypeScript</a
+        >
+      </h3>
+
+      <p>
+        This is a tiny project I've built to solve a specific problem I had.
+        It's interesting, because it's essentially "complete", in that the
+        format won't change a whole lot, and the parser is very simple. I like
+        the fact that despite its size I've made it very easy to use, basing it
+        on the <code>JSON</code> API. It also has decent documentation.
+      </p>
+
+      <h3>
+        <a href="https://github.com/danielkov/gin-helmet">Gin Helmet</a> - My
+        Most Popular Project
+      </h3>
+
+      <p>
+        I've built this neat little middleware for the Gin web framework in Go.
+        I was surprised to see it gain some traction, as it was a very small
+        project, but I'm happy to see that it's being used by people. It has
+        extensive documentation via GoDoc - something I like about Go - and it's
+        very easy to use.
+      </p>
+      <p>
+        7 years after publishing this library, I've decided to create a Rust
+        version of it, called
+        <a href="https://github.com/danielkov/rust-helmet">Rust Helmet</a>. I
+        like the API of the Rust version even more than the Go version, and I'm
+        excited to see where it goes. It also features a lot more extensive
+        documentation than the Go version and it currently supports 2 web
+        frameworks, with the ability to add support for more in a trivial and
+        documented way.
+      </p>
+
+      <h2>Technical Writing...</h2>
+
+      <p>
+        In case it wasn't obvious from the length of this page, I love writing.
+        I wouldn't say I'm particularly good at it, but I enjoy doing it, and
+        some say that's half the job. I've written a variety of articles over
+        the years and I'm hoping to write more in the future. Here's a
+        non-exhaustive list of articles I've written:
+      </p>
+
+      <ul>
+        <li>
+          <a
+            href="https://dev.to/superbet/7-tips-to-crush-your-next-system-design-interview-4cfe"
+            >7 Tips to Crush Your Next System Design Interview</a
+          >
+          for Superbet
+        </li>
+        <li>
+          <a
+            href="https://kde.design/wordpress-rest-api-as-a-backend-with-react-and-docker-part-1"
+            >WordPress REST API as a Back-end with React and Docker</a
+          >
+          - Two part series on my freelancing portfolio site
+        </li>
+        <li>
+          <a
+            href="https://dev.to/danielkov/visual-primitives-and-headless-uis-a-modern-ui-library-trend-19jk"
+            >Visual Primitives and Headless UIs - a Modern UI Library Trend</a
+          >
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>

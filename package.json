@@ -1,0 +1,17 @@
+{
+  "name": "danielkov.github.io",
+  "version": "1.0.0",
+  "description": "For this project, I will attempt to create this whole webpage on my Android phone, using [Hacker's Keyboard](https://github.com/klausw/hackerskeyboard).",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./styles.css -o ./dist/styles.css",
+    "watch:css": "tailwindcss -i ./styles.css -o ./dist/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.12",
+    "tailwindcss": "^3.4.3"
+  }
+}
